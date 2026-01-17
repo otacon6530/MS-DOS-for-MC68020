@@ -1,37 +1,53 @@
-; MSINIT.ASM - MC68020 Port Skeleton
+; MSINIT.ASM - MC68020/Amiga Port
 ; System and hardware initialization for MS-DOS/MC68020
-; This file is a porting skeleton based on the v4.0 x86 MSINIT.ASM
+; Initial implementation: minimal entry point, data section, and structure for further routines
 
-; TODO: Implement MC68020-specific initialization routines
-;       Adapt RTC, memory, and device setup for 68k hardware
+SECTION DATA
+; --- System Variables ---
+Daycnt:      dc.l 0    ; Days since 1-1-1980
+base_century: dc.b 19  ; Default to 20th century
+base_year:    dc.b 80  ; Default to 1980
+month_tab:    dc.b 31,28,31,30,31,30,31,31,30,31,30,31
 
-; --- Data Section ---
-                SECTION DATA
+SECTION CODE
+; --- Entry Point ---
+MSINIT_Start:
+    ; Set up stack pointer (example: move.l #$80000,sp)
+    move.l  #$80000,sp
 
-; Define variables as needed (e.g., daycnt, base_century, base_year, month_tab)
+    ; Initialize memory (placeholder)
+    bsr     InitMemory
 
-; --- Code Section ---
-                SECTION CODE
+    ; Initialize real-time clock (placeholder)
+    bsr     InitClock
 
-; Daycnt_to_day: Convert days since 1-1-1980 to BCD date (MC68020 version)
+    ; Further initialization routines go here
+
+    rts
+
+; --- Memory Initialization (stub) ---
+InitMemory:
+    ; TODO: Implement Amiga/MC68020 memory setup
+    rts
+
+; --- Real-Time Clock Initialization (stub) ---
+InitClock:
+    ; TODO: Implement Amiga/MC68020 RTC setup
+    rts
+
+; --- Daycnt_to_day: Convert days since 1-1-1980 to BCD date (stub) ---
 Daycnt_to_day:
-                ; Input: D0 = daycnt
-                ; Output: D1 = BCD century, D2 = BCD year, D3 = BCD month, D4 = BCD day
-                ; TODO: Implement logic in 68k assembly
-                RTS
+    ; TODO: Implement logic in 68k assembly
+    rts
 
-; Bin_to_bcd: Convert binary value in D0 to BCD (MC68020 version)
+; --- Bin_to_bcd: Convert binary value in D0 to BCD (stub) ---
 Bin_to_bcd:
-                ; Input: D0 = binary value (0-99)
-                ; Output: D0 = BCD value
-                ; TODO: Implement logic in 68k assembly
-                RTS
+    ; TODO: Implement logic in 68k assembly
+    rts
 
-; INT6C: System resume handler (MC68020 version)
+; --- INT6C: System resume handler (stub) ---
 INT6C:
-                ; TODO: Implement RTC read, update system date/time, and return
-                RTS
+    ; TODO: Implement RTC read, update system date/time, and return
+    rts
 
-; Include additional routines and initialization as needed
-
-; End of MSINIT.ASM (MC68020 skeleton)
+; End of MSINIT.ASM (MC68020/Amiga implementation start)
