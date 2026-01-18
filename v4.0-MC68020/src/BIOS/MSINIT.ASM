@@ -2,14 +2,14 @@
 ; System and hardware initialization for MS-DOS/MC68020
 ; Initial implementation: minimal entry point, data section, and structure for further routines
 
-SECTION DATA
+; section removed for vasm flat binary
 ; --- System Variables ---
 Daycnt:      dc.l 0    ; Days since 1-1-1980
 base_century: dc.b 19  ; Default to 20th century
 base_year:    dc.b 80  ; Default to 1980
 month_tab:    dc.b 31,28,31,30,31,30,31,31,30,31,30,31
 
-SECTION CODE
+; section removed for vasm flat binary
 ; --- Entry Point ---
 MSINIT_Start:
     ; Set up stack pointer (example: move.l #$80000,sp)

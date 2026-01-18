@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific printer routines
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define printer state variables as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; PRN$WRIT: Write to printer device (MC68020 version)
 PRN_WRIT:
     ; TODO: Implement printer write logic

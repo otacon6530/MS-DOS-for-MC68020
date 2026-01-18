@@ -5,10 +5,10 @@
 ; TODO: Implement MC68020-specific device and error handling routines
 ;       Adapt hardware model/configuration logic for 68k
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define system state variables and model bytes as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; Device-specific routines (MC68020 version)
 DEVICE_ROUTINES:
     ; TODO: Implement device logic

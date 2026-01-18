@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific keyboard and display routines
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define console input/output buffers as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; CON$READ: Read characters from console (MC68020 version)
 CON_READ:
     ; TODO: Implement console read logic

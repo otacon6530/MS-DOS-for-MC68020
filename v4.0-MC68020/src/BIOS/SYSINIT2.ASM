@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific device and error handling
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define system variables and error messages as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; Device installation and error handling (MC68020 version)
 SYSINIT2_START:
     ; TODO: Implement device installation and error handling logic

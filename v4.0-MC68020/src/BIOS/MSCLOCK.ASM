@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific RTC and timekeeping routines
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define time/date variables as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; TIM$WRIT: Set current time (MC68020 version)
 TIM_WRIT:
     ; TODO: Implement set time logic

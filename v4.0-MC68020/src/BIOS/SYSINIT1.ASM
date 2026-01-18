@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific memory and device initialization
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define system variables and memory structures as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; System initialization entry point (MC68020 version)
 SYSINIT1_START:
     ; TODO: Implement memory and device initialization logic

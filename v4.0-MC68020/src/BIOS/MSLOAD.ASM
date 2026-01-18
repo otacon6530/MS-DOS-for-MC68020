@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific loader routines
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define loader state variables as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; Loader entry point (MC68020 version)
 LOADER_START:
     ; TODO: Implement loader logic for boot sector and FAT

@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific error and message handling
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define error and message strings as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; Error handling routines (MC68020 version)
 ERROR_HANDLER:
     ; TODO: Implement error handling logic

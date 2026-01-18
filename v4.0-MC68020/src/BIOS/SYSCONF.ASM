@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific system initialization and config parsing
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define system configuration variables as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; System initialization entry point (MC68020 version)
 SYS_INIT:
     ; TODO: Implement system initialization logic

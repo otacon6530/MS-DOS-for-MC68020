@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific hard disk I/O and INT 13h interception
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define command blocks and disk status variables as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; Hard disk read routine (MC68020 version)
 HARD_READ:
     ; TODO: Implement hard disk read logic

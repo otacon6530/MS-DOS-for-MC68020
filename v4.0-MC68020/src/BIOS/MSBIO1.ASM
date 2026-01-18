@@ -5,10 +5,10 @@
 ; TODO: Implement MC68020-specific BIOS initialization and device setup
 ;       Adapt entry points and hardware access for 68k
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define BIOS data structures as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; BIOS initialization entry point (MC68020 version)
 BIOS_INIT:
     ; TODO: Implement BIOS initialization logic

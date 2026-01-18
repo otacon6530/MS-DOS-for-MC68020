@@ -4,10 +4,10 @@
 
 ; TODO: Implement MC68020-specific disk I/O and device control routines
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define disk state variables and buffers as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; Disk read/write routines (MC68020 version)
 DISK_READ:
     ; TODO: Implement disk read logic

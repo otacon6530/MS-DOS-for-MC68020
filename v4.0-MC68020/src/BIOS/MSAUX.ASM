@@ -5,10 +5,10 @@
 ; TODO: Implement MC68020-specific serial port routines
 ;       Adapt buffer management and device access for 68k hardware
 
-SECTION DATA
+; section removed for vasm flat binary
 ; Define AUXBUF and related variables as needed
 
-SECTION CODE
+; section removed for vasm flat binary
 ; AUX$READ: Read characters from serial device (MC68020 version)
 AUX_READ:
     ; TODO: Implement serial read logic
