@@ -1,7 +1,7 @@
 # build.ps1 - PowerShell build script for MS-DOS-for-MC68020 using vasm
 # Usage: Run in PowerShell from src directory
 
-$vasm = "vasmm68k_mot.exe"
+$vasm = "vasmm68k_STD.exe"
 $outdir = "..\..\bin"
 $biosDir = "BIOS"
 
@@ -11,11 +11,19 @@ if (!(Test-Path $outdir)) {
 
 
 
-# Assemble each BIOS ASM file to .bin
+
+# Assemble BIOS ASM files in original MSBIO.LNK order
+$biosOrder = @(
+    'INIT.ASM'
+)
 $binFiles = @()
-Get-ChildItem -Path $biosDir -Filter *.ASM | ForEach-Object {
-    $src = $_.FullName
-    $out = Join-Path $outdir ("$($_.BaseName).bin")
+foreach ($asm in $biosOrder) {
+    $src = Join-Path $biosDir $asm
+    if (!(Test-Path $src)) {
+        Write-Host "Warning: $src not found, skipping." -ForegroundColor Yellow
+        continue
+    }
+    $out = Join-Path $outdir ("$([System.IO.Path]::GetFileNameWithoutExtension($asm)).bin")
     Write-Host "Assembling $src ..."
     & $vasm -Fbin -o $out $src
     if ($LASTEXITCODE -ne 0) {
@@ -33,8 +41,8 @@ foreach ($file in $binFiles) {
 
 
 # Split into 4 interleaved ROMs: h, p, m, k (using List[byte] for safe appending)
-$romNames = @('h','p','m','k')
-$romFiles = $romNames | ForEach-Object { Join-Path $outdir ("area51mx.3$_") }
+$romNames = @('2.0_68020_max-a51_kit_3h.3h','2.0_68020_max-a51_kit_3p.3p','2.0_68020_max-a51_kit_3m.3m','2.0_68020_max-a51_kit_3k.3k')
+$romFiles = $romNames | ForEach-Object { Join-Path $outdir ("$_") }
 $romData = @()
 for ($i = 0; $i -lt 4; $i++) {
     $romData += ,([System.Collections.Generic.List[byte]]::new())
